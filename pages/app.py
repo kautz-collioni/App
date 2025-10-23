@@ -21,7 +21,7 @@ def load_css(file_name):
 # Controls the user's login state
 if 'logged_in' not in st.session_state:
     st.session_state.logged_in = False
-    st.switch_page("Login")
+    st.switch_page("login")
 
 # Controls the current section in the main application
 if 'current_section' not in st.session_state:
@@ -35,7 +35,7 @@ def back_to_login():
     for key in keys_to_delete:
         del st.session_state[key]
     st.session_state.logged_in = False
-    st.switch_page("Login")
+    st.switch_page("login")
 
 # ======================== 4. MAIN APPLICATION ========================
 
@@ -291,4 +291,4 @@ def main_app():
 if st.session_state.get('logged_in', False):
     main_app()
 else:
-    st.switch_page("Login")
+    st.switch_page("login")
