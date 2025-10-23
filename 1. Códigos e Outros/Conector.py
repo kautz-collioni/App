@@ -1035,7 +1035,7 @@ comparison_table.columns = [
 # revision = pd.read_csv("Entregável - Tabela de Comparação.csv", sep = ";", decimal = ",")
 # revision.sample(5)
 
-with open("Script Consolidado (12-10-2025 G).ipynb", "r", encoding = "utf-8") as f:
+with open("1. Códigos e Outros/Script Consolidado (12-10-2025 G).ipynb", "r", encoding = "utf-8") as f:
     nb = nbformat.read(f, as_version = 4)
 
 code = ""
@@ -1043,6 +1043,6 @@ for cell in nb.cells:
     if cell.cell_type == "code":
         code += cell.source + "\n\n"
 
-with open("Conector.py", "w", encoding="utf-8") as f:
+with open("1. Códigos e Outros/Conector.py", "w", encoding="utf-8") as f:
     f.write(code)
 
