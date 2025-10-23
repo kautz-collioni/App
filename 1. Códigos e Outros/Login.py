@@ -32,8 +32,8 @@ def login_page():
     # Sidebar page Config
     st.set_page_config(initial_sidebar_state="collapsed")
 
-    load_css("styles/common_style.css")
-    load_css("styles/login_style.css")
+    load_css("1. Códigos e Outros/styles/common_style.css")
+    load_css("1. Códigos e Outros/styles/login_style.css")
 
     # Logo loading
     try:
@@ -62,7 +62,7 @@ def login_page():
             time.sleep(1)
             st.session_state.logged_in = True
             st.session_state.username = username
-            st.switch_page("pages/Streamlit2.py")
+            st.switch_page("1. Códigos e Outros/pages/Streamlit2.py")
         else:
             st.error("Usuário ou senha incorretos!")
     
@@ -84,4 +84,4 @@ def login_page():
 if not st.session_state.get('logged_in', False):
     login_page()
 else:
-    st.switch_page("pages/Streamlit2.py")
+    st.switch_page("1. Códigos e Outros/pages/Streamlit2.py")
