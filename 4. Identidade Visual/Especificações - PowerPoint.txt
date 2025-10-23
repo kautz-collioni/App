@@ -1,5 +1,0 @@
-Tamanho do Slide: 100x100;
-Tamanho da Fonte: 325;
-Cor: #000014 (azul); #1A0000 (marrom);
-Espaçamento entre Linhas: 325; e
-Parágrafo: alinhamento centralizado.
