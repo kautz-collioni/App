@@ -43,8 +43,8 @@ def main_app():
     # Sidebar page Config
     st.set_page_config(initial_sidebar_state="expanded")
     # Load main application CSS
-    load_css("1. Códigos e Outros/styles/common_style.css")
-    load_css("1. Códigos e Outros/styles/sidebar_style.css")
+    load_css("styles/common_style.css")
+    load_css("styles/sidebar_style.css")
 
     # Main application title
     st.markdown("""
@@ -64,7 +64,7 @@ def main_app():
     with st.sidebar:
         # Loading the sidebar header logo
         try:
-            with open("1. Códigos e Outros/media/Cabecalho.svg", "rb") as f:
+            with open("media/Cabecalho.svg", "rb") as f:
                 image_base64 = base64.b64encode(f.read()).decode()
             st.markdown(
                 f"""
@@ -224,7 +224,7 @@ def main_app():
 
         with col1:
             st.markdown("#### Bernardo Kautz")
-            st.image("1. Códigos e Outros/media/avatar1.jpeg", use_container_width=True)          
+            st.image("media/avatar1.jpeg", use_container_width=True)          
             st.markdown("Sócio / Diretor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Economista")
             
             icon_col1, icon_col2, icon_col3 = st.columns(3)
@@ -249,7 +249,7 @@ def main_app():
 
         with col2:
             st.markdown("#### Gustavo Collioni")
-            st.image("1. Códigos e Outros/media/avatar2.jpg", use_container_width=True)
+            st.image("media/avatar2.jpg", use_container_width=True)
             st.markdown("Sócio / Diretor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Economista")
 
             icon_col4, icon_col5, icon_col6 = st.columns(3)
