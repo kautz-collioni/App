@@ -62,7 +62,7 @@ def login_page():
             time.sleep(1)
             st.session_state.logged_in = True
             st.session_state.username = username
-            st.switch_page("Streamlit2")
+            st.switch_page("app")
         else:
             st.error("Usuário ou senha incorretos!")
     
@@ -84,4 +84,4 @@ def login_page():
 if not st.session_state.get('logged_in', False):
     login_page()
 else:
-    st.switch_page("Streamlit2")
+    st.switch_page("app")
