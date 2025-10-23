@@ -21,7 +21,7 @@ def load_css(file_name):
 # Controls the user's login state
 if 'logged_in' not in st.session_state:
     st.session_state.logged_in = False
-    st.switch_page("Login.py")
+    st.switch_page("1. Códigos e Outros/Login.py")
 
 # Controls the current section in the main application
 if 'current_section' not in st.session_state:
@@ -35,7 +35,7 @@ def back_to_login():
     for key in keys_to_delete:
         del st.session_state[key]
     st.session_state.logged_in = False
-    st.switch_page("Login.py")
+    st.switch_page("1. Códigos e Outros/Login.py")
 
 # ======================== 4. MAIN APPLICATION ========================
 
@@ -43,8 +43,8 @@ def main_app():
     # Sidebar page Config
     st.set_page_config(initial_sidebar_state="expanded")
     # Load main application CSS
-    load_css("styles/common_style.css")
-    load_css("styles/sidebar_style.css")
+    load_css("1. Códigos e Outros/styles/common_style.css")
+    load_css("1. Códigos e Outros/styles/sidebar_style.css")
 
     # Main application title
     st.markdown("""
@@ -64,7 +64,7 @@ def main_app():
     with st.sidebar:
         # Loading the sidebar header logo
         try:
-            with open("media/Cabecalho.svg", "rb") as f:
+            with open("1. Códigos e Outros/media/Cabecalho.svg", "rb") as f:
                 image_base64 = base64.b64encode(f.read()).decode()
             st.markdown(
                 f"""
@@ -224,7 +224,7 @@ def main_app():
 
         with col1:
             st.markdown("#### Bernardo Kautz")
-            st.image("media/avatar1.jpeg", use_container_width=True)          
+            st.image("1. Códigos e Outros/media/avatar1.jpeg", use_container_width=True)          
             st.markdown("Sócio / Diretor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Economista")
             
             icon_col1, icon_col2, icon_col3 = st.columns(3)
@@ -249,7 +249,7 @@ def main_app():
 
         with col2:
             st.markdown("#### Gustavo Collioni")
-            st.image("media/avatar2.jpg", use_container_width=True)
+            st.image("1. Códigos e Outros/media/avatar2.jpg", use_container_width=True)
             st.markdown("Sócio / Diretor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Economista")
 
             icon_col4, icon_col5, icon_col6 = st.columns(3)
@@ -291,4 +291,4 @@ def main_app():
 if st.session_state.get('logged_in', False):
     main_app()
 else:
-    st.switch_page("Login.py")
+    st.switch_page("1. Códigos e Outros/Login.py")
